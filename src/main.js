@@ -849,6 +849,8 @@ class EmailBodyAnalyzer {
       { pattern: /https?:\/\/(storage\.googleapis\.com|firebasestorage\.googleapis\.com|.*\.web\.app|.*\.firebaseapp\.com)\/[^\s]+\.html/gi, points: 15, desc: 'Cloud storage hosting phishing page' },
       // Suspicious file hosting services used for phishing
       { pattern: /https?:\/\/(docs\.google\.com\/forms|forms\.gle)\//gi, points: 6, desc: 'Google Forms (potential credential harvesting)' },
+      // Direct links to executable files
+      { pattern: /https?:\/\/[^\s"'<>]+\.exe\b/gi, points: 25, desc: 'Direct link to .exe file (malware risk)' },
     ]
 
     const text = this.body // Check raw body for URLs
