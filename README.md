@@ -2,6 +2,8 @@
 
 A client-side web application that analyzes email headers and content to detect potential phishing attempts. All analysis happens locally in your browser - no data is sent to any server.
 
+![Check Phishing](checkphishing.png)
+
 ## Features
 
 ### Header Analysis
